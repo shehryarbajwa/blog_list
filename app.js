@@ -6,6 +6,7 @@ const cors = require('cors')
 const blogRouter = require('./controllers/blogBook.js')
 const middleware = require('./utils/middleware')
 const mongoose = require('mongoose')
+const usersRouter = require("./controllers/users.js")
 
 mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true })
   .then(() => {
@@ -19,6 +20,7 @@ mongoose.connect(config.MONGODB_URI, { useNewUrlParser: true })
   app.use(bodyParser.json())
   app.use(middleware.requestLogger)
   app.use('/api/blogs', blogRouter)
+  app.use('/api/users', usersRouter)
   
   app.use(middleware.unknownEndpoint)
   app.use(middleware.errorHandler)
