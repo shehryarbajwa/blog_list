@@ -1,9 +1,9 @@
-POST http://localhost:3003/api/blogs/
+POST http://localhost:3003/api/blogs
 Content-Type: application/json
 
 {
    "title": "Bajwa",
-  "author": "Shehryar",
-  "url": "www.facebook.com",
-  "likes": 12
+   "author": "Shehryar",
+   "url": "www.facebook.com",
+   "likes": 12
 }
