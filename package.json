@@ -30,6 +30,6 @@
     "testEnvironment": "node"
   },
   "dependencies": {
-    "bcrypt": "^3.0.7"
+    "bcrypt": "^5.0.0"
   }
 }
